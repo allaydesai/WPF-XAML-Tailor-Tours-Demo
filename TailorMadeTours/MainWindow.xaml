@@ -8,8 +8,8 @@
         mc:Ignorable="d"
         Title="Tailor-made Tours - Chicago"
         Height="700"
-        Width="800"
-        WindowState="Maximized"
+        Width="900"
+        WindowStartupLocation="CenterScreen"
         FontSize="18">
 
   <StackPanel >
@@ -25,7 +25,7 @@
         <views:DetailView />
       </TabItem>
       <TabItem Header="Weekly Calendar">
-        <Grid Background="#FFE5E5E5" />
+        <views:ScheduleView />
 
       </TabItem>
     </TabControl>

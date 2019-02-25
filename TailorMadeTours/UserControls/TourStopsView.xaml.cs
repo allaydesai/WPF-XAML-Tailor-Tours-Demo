@@ -27,5 +27,17 @@ namespace TailorMadeTours.UserControls
 
             ToursListBox.ItemsSource = TourSource.GetAllTourStops();
         }
+
+        private void CalcButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Create LINQ query 
+            var q = from stops in TourSource.GetAllTourStops()
+                    where stops.Selected == true
+                    select stops.EstimatedMinutes;
+
+            MessageTextBlock.Text = string.Format("{0} minutes", q.Sum());
+
+
+        }
     }
 }
